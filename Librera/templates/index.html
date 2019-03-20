@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Librera</title>
+</head>
+<body>
+    <h1>Librera</h1>
+    <h2>A continuacion podras administrar tanto autores como libros.</h2>
+    <ul>
+        <li>
+            <h3><a href="{% url 'librera:AutorList' %}">Autores</a></h3>
+        </li>
+        <li>
+            <h3><a href="{% url 'librera:LibroList' %}">Libros</a></h3>
+        </li>
+    </ul>
+</body>
+</html>

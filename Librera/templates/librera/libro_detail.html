@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <title>{{ libro.nombre }}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+    <section>
+        <a href="{% url 'librera:LibroList' %}">| Regresar</a>
+        <h1>Nombre: {{ libro.nombre }}</h1>
+        <h3>Autor: {{ libro.autor }}</h3>
+        <h3>Editorial: {{ libro.editorial }}</h3>
+        <h3>Precio: {{ libro.precio }}</h3>
+    </section>
+    
+</body>
+</html>

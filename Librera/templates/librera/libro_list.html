@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <a href="{% url 'librera:new_libro' %}">Nuevo Libro</a>
+        <a href="{% url 'librera:index' %}">| Regresar</a> 
+        <h2></h2>
+        <ul>
+            {% for l in object_list %}
+            <li>
+                <a href="{% url 'librera:LibroDetail' l.id %}"> 
+                {{ l.autor }}
+                </a>
+                |{{ l.nombre }}
+                |{{ l.editorial }}
+                |{{ l.precio }}
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+</body>
+</html>

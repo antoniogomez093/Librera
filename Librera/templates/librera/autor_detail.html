@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <title>{{ autor.nombre }}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+    <section>
+        <a href="{% url 'librera:AutorList' %}">Regresar</a>
+        <h1>Nombre: {{ autor.nombre }}</h1>
+        <h3>Pais de origen: {{ autor.pais }}</h3>
+    </section>
+   
+</body>
+</html>

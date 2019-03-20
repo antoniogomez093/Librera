@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Libro</title>
+</head>
+<body>
+    <h1>Nuevo Autor</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }} <!-- .as_p despliega en lista -->
+        <button type="submit">Guardar</button>
+    </form>
+</body>
+</html>
